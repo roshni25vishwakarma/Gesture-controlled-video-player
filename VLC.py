@@ -1,7 +1,7 @@
  from sys import modules
 
 
-import vlc modules
+import vlc.modules
 import vlc
  
 # creating vlc media player object
@@ -14,7 +14,7 @@ import time, vlc
  
 # method to play video
 def video(source):
-    vlc_instance = vlc.Instance()
+   vlc_instance = vlc.Instance()
      
     # creating a media player
     player = vlc_instance.media_player_new()
@@ -39,3 +39,4 @@ def video(source):
      
     # call the video method
     video("your_video.mp4")
+
