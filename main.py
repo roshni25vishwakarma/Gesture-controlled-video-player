@@ -1,8 +1,8 @@
 import streamlit as st
 
 
-st.title("My Mini Project Name")
-st.image('hero.jpg', use_column_width=True)
+st.title("Gesture Controlled Video Player")
+st.image('gc.jpeg', use_column_width=True)
 
 
 sidebar = st.sidebar
@@ -18,10 +18,10 @@ def introduction():
         - Feature 3
     """)
 
-    c1, c2 = st.columns(2)
+    c1= st.columns(1)
 
     c1.header("Column 1 Content")
-    c2.header("Column 2 Content")
+
 
 
 def execute():
@@ -30,6 +30,28 @@ def execute():
 
 options = ['Project Introduction', 'Execution']
 
+selOption = sidebar.selectbox("Select an Option", options)
+
+if selOption == options[0]:
+    introduction()
+elif selOption == options[1]:
+    execute()
+ 
+def setting():
+    st.sidebar('hight')
+    st.sidebar('width')
+    st.sidebar('fps')
+    selectbox = st.sidebar.selectbox("select hight ,width,fps"),["hight","width","fps"]
+    st.write(f"You select{selectbox}")
+
+
+
+
+
+
+
+
+options = ['Project Introduction','Execution','setting']
 selOption = sidebar.selectbox("Select an Option", options)
 
 if selOption == options[0]:
