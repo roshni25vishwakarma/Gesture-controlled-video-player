@@ -12,15 +12,12 @@ sidebar.title('User Options')
 
 def introduction():
     st.markdown("""
-        ## Heading Level 2
-        - Feature 1
-        - Feature 2
-        - Feature 3
+        ## Computer Vision
+        -Computer vision is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs — and take actions or make recommendations based on that information.
     """)
 
     c1= st.columns(1)
 
-    c1.header("Column 1 Content")
 
 
 
@@ -37,24 +34,4 @@ if selOption == options[0]:
 elif selOption == options[1]:
     execute()
  
-def setting():
-    st.sidebar('hight')
-    st.sidebar('width')
-    st.sidebar('fps')
-    selectbox = st.sidebar.selectbox("select hight ,width,fps"),["hight","width","fps"]
-    st.write(f"You select{selectbox}")
 
-
-
-
-
-
-
-
-options = ['Project Introduction','Execution','setting']
-selOption = sidebar.selectbox("Select an Option", options)
-
-if selOption == options[0]:
-    introduction()
-elif selOption == options[1]:
-    execute()
