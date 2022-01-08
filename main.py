@@ -10,26 +10,15 @@ sidebar = st.sidebar
 sidebar.title('User Options')
 
 
-def introduction():
+def Introduction():
+    st.title("computer vision")
+    st.image('sv.jpg', use_column_width=True)
     st.markdown("""
-        ## Computer Vision
-        -Computer vision is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs — and take actions or make recommendations based on that information.
-    """)
-def introduction():
-    st.markdown("""
-        ## Instructions
     
-    Use One Finger for Volume Up.
-    Use Two Fingers for Volume Down.
-    Use Three Fingers for Volume Mute.
-    Use Four Fingers for Play.
-    Use Five Fingers for Pause.
+        -Computer vision is a field of artificial intelligence (AI) that enables computers and systems to derive meaningful information from digital images, videos and other visual inputs — and take actions or make recommendations based on that information.
     """)
 
     c1= st.columns(1)
-
-
-
 
 def execute():
     st.subheader('project working here')
@@ -40,8 +29,8 @@ options = ['Project Introduction', 'Execution']
 selOption = sidebar.selectbox("Select an Option", options)
 
 if selOption == options[0]:
-    introduction()
+    Introduction()
 elif selOption == options[1]:
     execute()
- 
-
+    
+    
