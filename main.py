@@ -1,5 +1,5 @@
 import streamlit as st
-
+from vlc2 import GestureRecognition
 
 st.title("Gesture Controlled Video Player")
 st.image('gc.jpeg', use_column_width=True)
@@ -25,16 +25,22 @@ def execute():
     st.title("USAGE")
     st.markdown("""
     """)
+    st.markdown("""
+      video controll by gesture steps.
+    """)
     st.markdown("""1-Detection  of  hand  from  streaming  video  by  using Lucas  Kanade  Pyramidical  Optical  Flow.
-     2-algorithm. It detects moving points (hand) in image.   
+     2-algorithm it detects moving points (hand) in image.   
      3-It passes the above moving points to K-MEAN  .
      4-algorithm to find center of motion which is equivalent to the center of moving hand.   Generate  a  rectangle  around this  motion  center and crop the region within this rectangle.  
      5-After cropping  save image to a specific location for learning or directly use for recognition.  
     6-Learning  Phase:  After  getting  efficient  images  from  above operations  these  are  used  for  training.
     """)
-    st.markdown("""
-      video controll by gesture.
-    """)
+
+
+    run = st.checkbox('Run Gesture Recognitiom')
+    if run:
+        GestureRecognition()
+
 options = ['Project Introduction', 'Execution']
 
 selOption = sidebar.selectbox("Select an Option", options)
