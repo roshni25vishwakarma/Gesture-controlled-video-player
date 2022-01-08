@@ -22,8 +22,19 @@ def Introduction():
 
 def execute():
     st.subheader('project working here')
-
-
+    st.title("USAGE")
+    st.markdown("""
+    """)
+    st.markdown("""1-Detection  of  hand  from  streaming  video  by  using Lucas  Kanade  Pyramidical  Optical  Flow.
+     2-algorithm. It detects moving points (hand) in image.   
+     3-It passes the above moving points to K-MEAN  .
+     4-algorithm to find center of motion which is equivalent to the center of moving hand.   Generate  a  rectangle  around this  motion  center and crop the region within this rectangle.  
+     5-After cropping  save image to a specific location for learning or directly use for recognition.  
+    6-Learning  Phase:  After  getting  efficient  images  from  above operations  these  are  used  for  training.
+    """)
+    st.markdown("""
+      video controll by gesture.
+    """)
 options = ['Project Introduction', 'Execution']
 
 selOption = sidebar.selectbox("Select an Option", options)
@@ -33,4 +44,7 @@ if selOption == options[0]:
 elif selOption == options[1]:
     execute()
     
+    
+
+
     
